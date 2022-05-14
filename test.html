@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="dv">
+        <div>asdf</div>
+        <input type="text" />
+    </div>
+    <script src="./function.js"></script>
+    <script>
+        const dv = document.getElementById('dv')
+        // animate(document.getElementById('dv'), {
+        //     left: 300,
+        //     top: 300
+        // })
+        ElasticMovement(dv, 200)
+        let url = 'https://csdnimg.cn/release/cmsfe/public/js/runtime.5aafb0f2.js'
+        // loadScript(url)
+        function ajax (content) {
+            console.log('ajax request ' + content)
+        }
+        let vel = debounce((e) => {
+            console.log(e.target.value)
+        }, 1000)
+        addEvent(document.querySelector('input'), 'input', vel)
+
+        // const body = document.getElementsByTagName('body')
+        // traverse(dv, function (dv) {
+        //     console.log(dv)
+        // })
+    </script>
+
+</body>
+
+</html>
